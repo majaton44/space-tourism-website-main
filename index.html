@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="index.css" />
 
     <title>Space tourism website</title>
+
+    <script src="index.js" defer></script>
   </head>
   <body class="home">
     <!-- header -->
@@ -26,16 +28,13 @@
       <div>
         <img src="assets/shared/logo.svg" alt="logo" class="logo" />
       </div>
-      <button
-        class="mobile-nav-toggle"
-        aria-controls="primary-navigation"
-        aria-expanded="false"
-      >
-        <span class="sr-only">Menu</span>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+        <span class="sr-only" aria-expanded="false">Menu</span>
       </button>
       <nav class="flex" style="flex-wrap: wrap">
         <ul
           id="primary-navigation"
+          data-visible="false"
           class="primary-navigation underline-indicators flex"
         >
           <li class="active">
