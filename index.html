@@ -28,7 +28,7 @@
       <button class="mobile-nav-toggle" aria-controls="primary-navigation">
         <span class="sr-only" aria-expanded="false">Menu</span>
       </button>
-      <nav class="flex" style="flex-wrap: wrap">
+      <nav>
         <ul
           id="primary-navigation"
           data-visible="false"
@@ -38,28 +38,28 @@
             <a
               href="index.html"
               class="uppercase ff-sans-cond letter-spacing-3 text-white"
-              ><span>00</span>Home</a
+              ><span aria-hidden="true">00</span>Home</a
             >
           </li>
           <li>
             <a
               href="destination.html"
               class="uppercase ff-sans-cond letter-spacing-3 text-white"
-              ><span>01</span>Destination</a
+              ><span aria-hidden="true">01</span>Destination</a
             >
           </li>
           <li>
             <a
               href="crew.html"
               class="uppercase ff-sans-cond letter-spacing-3 text-white"
-              ><span>02</span>Crew</a
+              ><span aria-hidden="true">02</span>Crew</a
             >
           </li>
           <li>
             <a
               href="technology.html"
               class="uppercase ff-sans-cond letter-spacing-3 text-white"
-              ><span>03</span>Technology</a
+              ><span aria-hidden="true">03</span>Technology</a
             >
           </li>
         </ul>
@@ -67,7 +67,8 @@
     </header>
 
     <!-- main -->
-    <div class="grid-container grid-container--home">
+
+    <main class="grid-container grid-container--home">
       <div class="flow">
         <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">
           So, you want to travel to
@@ -87,6 +88,6 @@
           >Explore</a
         >
       </div>
-    </div>
+    </main>
   </body>
 </html>
