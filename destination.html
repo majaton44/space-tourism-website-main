@@ -17,7 +17,8 @@
 
     <title>Space tourism website</title>
 
-    <script src="index.js" defer></script>
+    <script src="navigation.js" defer></script>
+    <script src="tabs.js" defer></script>
   </head>
   <body class="destination">
     <!-- header -->
@@ -72,15 +73,15 @@
       </h1>
 
       <!-- Images -->
-      <picture>
+      <picture id="moon-image">
         <source srcset="assets/destination/image-moon.webp" type="image/webp" />
         <img src="assets/destination/image-moon.png" alt="the moon" />
       </picture>
-      <picture hidden>
+      <picture id="mars-image" hidden>
         <source srcset="assets/destination/image-mars.webp" type="image/webp" />
         <img src="assets/destination/image-mars.png" alt="the planet mars" />
       </picture>
-      <picture hidden>
+      <picture id="europa-image" hidden>
         <source
           srcset="assets/destination/image-europa.webp"
           type="image/webp"
@@ -90,7 +91,7 @@
           alt="the planet europa"
         />
       </picture>
-      <picture hidden>
+      <picture id="titan-image" hidden>
         <source
           srcset="assets/destination/image-titan.webp"
           type="image/webp"
@@ -99,35 +100,60 @@
       </picture>
 
       <!-- Tabs -->
-      <div class="tab-list underline-indicators flex">
+      <div
+        class="tab-list underline-indicators flex"
+        role="tablist"
+        aria-label="destination list"
+      >
         <button
           aria-selected="true"
+          role="tab"
+          aria-controls="moon-tab"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          tabindex="0"
+          data-image="moon-image"
         >
           Moon
         </button>
         <button
           aria-selected="false"
+          role="tab"
+          aria-controls="mars-tab"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          tabindex="-1"
+          data-image="mars-image"
         >
           Mars
         </button>
         <button
           aria-selected="false"
+          role="tab"
+          aria-controls="europa-tab"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          tabindex="-1"
+          data-image="europa-image"
         >
           Europa
         </button>
         <button
           aria-selected="false"
+          role="tab"
+          aria-controls="titan-tab"
           class="uppercase ff-sans-cond text-accent letter-spacing-2"
+          tabindex="-1"
+          data-image="titan-image"
         >
           Titan
         </button>
       </div>
 
       <!-- Moon -->
-      <article class="destination-info flow">
+      <article
+        class="destination-info flow"
+        id="moon-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <h2 class="ff-serif fs-800 uppercase">Moon</h2>
         <p class="text-description text-accent">
           See our planet as you’ve never seen it before. A perfect relaxing trip
@@ -157,7 +183,13 @@
       </article>
 
       <!-- Mars -->
-      <article hidden class="destination-info flow">
+      <article
+        hidden
+        class="destination-info flow"
+        id="mars-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <h2 class="ff-serif fs-800 uppercase">Mars</h2>
         <p class="text-description text-accent">
           Don’t forget to pack your hiking boots. You’ll need them to tackle
@@ -186,7 +218,13 @@
       </article>
 
       <!-- Europa -->
-      <article hidden class="destination-info flow">
+      <article
+        hidden
+        class="destination-info flow"
+        id="europa-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <h2 class="ff-serif fs-800 uppercase">Europa</h2>
         <p class="text-description text-accent">
           The smallest of the four Galilean moons orbiting Jupiter, Europa is a
@@ -216,7 +254,13 @@
       </article>
 
       <!-- Titan -->
-      <article hidden class="destination-info flow">
+      <article
+        hidden
+        class="destination-info flow"
+        id="titan-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <h2 class="ff-serif fs-800 uppercase">Titan</h2>
         <p class="text-description text-accent">
           The only moon known to have a dense atmosphere other than Earth, Titan
