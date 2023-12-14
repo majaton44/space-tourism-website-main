@@ -25,6 +25,7 @@ Users should be able to:
 ### Screenshot
 
 ![screenshot of my solution](screenshot--01.png)
+![screenshot of my solution](screenshot--02.png)
 
 ### Links
 
