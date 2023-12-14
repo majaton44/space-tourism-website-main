@@ -51,6 +51,11 @@ function changeTabPanel(e) {
 
   hideContent(mainContainer, "picture");
   showContent(mainContainer, [`#${targetImage}`]);
+
+  /*=============== GSAP ANIMATION ===============*/
+  gsap.from(".animation-left", 1.2, { opacity: 0, x: 200, delay: 0.1 });
+  gsap.from(".animation-right", 1.2, { opacity: 0, x: -200, delay: 0.1 });
+  gsap.from(".animation-up", 1.2, { opacity: 0, y: 200, delay: 0.1 });
 }
 
 function hideContent(parent, content) {
